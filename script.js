@@ -35,3 +35,18 @@ window.addEventListener("scroll", function() {
     navbar.classList.remove("sticky");
   }
 });
+
+// Get all the <a> tags in the navbar
+var navbarLinks = document.querySelectorAll(".navbar a");
+
+// Add a click event listener to each <a> tag
+navbarLinks.forEach(function(link) {
+  link.addEventListener("click", function() {
+    // Remove the "active" class from all <a> tags
+    navbarLinks.forEach(function(link) {
+      link.classList.remove("active");
+    });
+    // Add the "active" class to the clicked <a> tag
+    link.classList.add("active");
+  });
+});
