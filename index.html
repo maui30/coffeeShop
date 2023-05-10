@@ -21,7 +21,7 @@
         <div id="menu-btn" class="fas fa-bars"></div>
         <nav class="navbar">
             <ul>
-                <li><a href="" class="active">Home</a></li>
+                <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#menu">Menu</a></li>
                 <li><a href="#music">Music</a></li>
                 <li><a href="#jobs">Jobs</a></li>
@@ -29,7 +29,7 @@
         </nav>
     </header>
     
-    <div class="bghome"> 
+    <div class="bghome" id="home"> 
         <section class="home" id="home">
             <div class="content">
                 <h3>Coffee Shop</h3>
@@ -86,14 +86,28 @@
         <iframe width="560" height="315" src="https://www.youtube.com/embed/IGkdvnuqsIs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
 
+
     <div class="jobs" id="jobs">
-        <h2>Looking for a Job?</h2>
+        <h2 class="title">Looking for a Job?</h2>
     </div>
 
-
+    <div class="container">
+		<div class="contact-box">
+			<div class="left"></div>
+			<div class="right">
+				<h2 class="cont">Contact Us</h2>
+				<input type="text" class="field" placeholder="Your Name">
+				<input type="text" class="field" placeholder="Your Email">
+				<input type="text" class="field" placeholder="Phone">
+				<textarea placeholder="Message" class="field"></textarea>
+				<button class="send">Send</button>
+			</div>
+		</div>
+    </div>
 
     <footer>
-
+        <p>Copyright @ 2023</p>
+        <p>coffeeShop@sample.com</p>
     </footer>
     
     <script src="script.js"></script>
