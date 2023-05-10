@@ -1,0 +1,223 @@
+*,html{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    list-style: none;
+    border:none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+/*Navbar*/
+header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    padding: 0 100px;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    box-shadow: 0px 15px 10px -15px #111;
+}
+
+.logo{
+    font-size:2rem;
+    font-weight: bold;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav ul li a{
+    display: block;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+    color: #4f4f4f;
+}
+
+nav ul li a:hover{
+    color: white;
+    background: black;
+}
+
+#menu-btn{
+    display:none;
+}
+
+nav ul li a.active{
+    color: white;
+    background: black;
+}
+
+/*home*/
+section{
+    padding:3rem 2rem;
+    max-width:1200px;
+    margin: 0;
+}
+
+body{
+    margin: 0;
+    padding:0;
+}
+
+.bghome{
+    background: url("../img/home.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.bghome .home{
+    min-height:90vh;
+    display: flex;
+    align-items: center;
+}
+
+.bghome .home .content{
+    width: 50rem;
+    text-align: center;
+}
+
+.bghome .home .content h3{
+    font-size:6rem;
+}
+
+.bghome .home .content {
+    font-size:20px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top: 1rem;
+    color: white;
+    background: black;
+    font-size: 18px;
+    padding: 18px 50px;
+    border-radius: 50px;
+}
+
+/*menu*/
+.menu{
+   max-width: 1200px;
+   margin:0 auto;
+   padding:3rem 2rem;
+}
+
+.menu .title{
+   font-size: 3.5rem;
+   color:#444;
+   margin-bottom: 3rem;
+   text-transform: uppercase;
+   text-align: center;
+}
+
+.menu .menu-cont{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+   gap:2rem;
+}
+
+.menu .menu-cont .product{
+   text-align: center;
+   padding:2rem 2rem;
+   background: #fff;
+   box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+   border-radius:20px;
+}
+
+.menu .menu-cont .product img{
+   height: 20rem;
+   transition: 0.3s;
+}
+
+.menu .menu-cont .product img:hover{
+   height: 25rem;
+}
+
+.menu .menu-cont .product:hover{
+    box-shadow: 0 .5rem 1rem #fcc78b;
+}
+
+iframe{
+    display: block;
+    margin: 0 auto;
+    padding: 2rem;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9;  
+}
+
+.music h2{
+    text-align: center;
+    font-size:3.5rem;
+    color:white;
+    padding:2rem;
+}
+
+.music{
+    background: #1a1a1a;
+}
+
+
+
+@media only screen and (max-width:1320px){
+    header{
+        padding: 0 50px;
+    }
+
+    .bghome{
+        background-position:left;
+    }
+
+    .bghome .home{
+        justify-content: center;
+    }
+
+}
+
+@media only screen and (max-width:867px){
+    #menu-btn{
+        display: block;
+        cursor:pointer;
+        font-size:2rem;
+    }
+
+    .navbar{
+        height: 0;
+        position: absolute;
+        top:80px;
+        left:0;
+        right:0;
+        width: 100vw;
+        background:white;
+        transition: 0.2s;
+        overflow: hidden;
+    }
+    
+    .navbar.active{
+        height: 270px;
+    }
+
+    .navbar ul{
+        display: block;
+        width: fit-content;
+        margin: 10px auto;
+        transition: 0.5s;
+        opacity: 0;
+    }
+    
+    .navbar.active ul{
+        opacity:1;
+    }
+
+    .navbar ul li a{
+        margin-bottom: 10px;
+    }
+}
