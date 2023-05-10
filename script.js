@@ -10,10 +10,10 @@ hamburger.onclick = function () {
 window.onscroll = function() {myFunction()};
 
 // Get the navbar
-var navbar = document.querySelector("header");
+let navbar = document.querySelector("header");
 
 // Get the offset position of the navbar
-var sticky = navbar.offsetTop;
+let sticky = navbar.offsetTop;
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function myFunction() {
@@ -37,7 +37,9 @@ window.addEventListener("scroll", function() {
 });
 
 // Get all the <a> tags in the navbar
-var navbarLinks = document.querySelectorAll(".navbar a");
+let navbarLinks = document.querySelectorAll(".navbar a");
+
+let menuHomeBtn = document.querySelector(".content a");
 
 // Add a click event listener to each <a> tag
 navbarLinks.forEach(function(link) {
@@ -46,7 +48,14 @@ navbarLinks.forEach(function(link) {
     navbarLinks.forEach(function(link) {
       link.classList.remove("active");
     });
-    // Add the "active" class to the clicked <a> tag
     link.classList.add("active");
   });
+});
+
+menuHomeBtn.addEventListener("click", function() {
+  navbarLinks.forEach(function(link) {
+    link.classList.remove("active");
+  });
+  // Add the "active" class to the "Menu" link in the navbar
+  document.querySelector(".navbar a[href='#menu']").classList.add("active");
 });
