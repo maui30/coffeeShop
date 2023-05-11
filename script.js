@@ -28,15 +28,12 @@ function myFunction() {
 window.addEventListener("scroll", function() {
   // Check if the user has scrolled past a certain threshold
   if (window.scrollY >= 100) {
-    // If they have, call the myFunction() function
     myFunction();
   } else {
-    // If they haven't, remove the "sticky" class from the navbar
     navbar.classList.remove("sticky");
   }
 });
 
-// Get all the <a> tags in the navbar
 let navbarLinks = document.querySelectorAll(".navbar a");
 
 let menuHomeBtn = document.querySelector(".content a");
